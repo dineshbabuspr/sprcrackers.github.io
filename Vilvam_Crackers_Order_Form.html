@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vilvam Crackers – Order Form 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--night:#1d1650;--gold:#ffb000;--paper:#f6f5fb;--card:#fff;--ink:#1b1a2e;--muted:#6b6985;--line:#e4e2ef;--wa:#128c4a;--hh:150px;box-sizing:border-box}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.4 Nunito,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding-bottom:110px;-webkit-tap-highlight-color:transparent}
+header{position:sticky;top:0;z-index:20;background:var(--night);color:#fff;padding:calc(10px + env(safe-area-inset-top,0px)) 14px 10px;box-shadow:0 3px 14px rgba(20,10,60,.35)}
+.brand{font:800 18px/1.1 "Baloo 2",system-ui,sans-serif;margin:0 0 8px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.brand small{font:600 12px Nunito,sans-serif;color:#b9b4e6}
+.tot{display:grid;grid-template-columns:1fr 1.25fr;gap:8px}
+.tile{border-radius:12px;padding:8px 12px;background:rgba(255,255,255,.1)}
+.tile span{display:block;font-size:12px;color:#cfcaf5}
+.tile b{font:800 22px/1.1 "Baloo 2",system-ui,sans-serif}
+.tile.pay{background:var(--gold);color:#2a1a00}
+.tile.pay span{color:#5a3b00}
+.tile.pay b{font-size:26px}
+.tools{margin-top:8px}
+#q{width:100%;border:0;border-radius:10px;padding:11px 14px;font:600 16px Nunito,sans-serif;background:#fff;color:var(--ink)}
+#q:focus,input:focus,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:1px}
+.chips{display:flex;gap:6px;overflow-x:auto;margin-top:8px;padding-bottom:2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips button{flex:none;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;border-radius:99px;padding:5px 12px;font:600 13px Nunito,sans-serif;white-space:nowrap}
+main{padding:12px 12px 0;max-width:720px;margin:0 auto}
+details{background:var(--card);border-radius:14px;margin-bottom:10px;border:1px solid var(--line);scroll-margin-top:calc(var(--hh) + 8px);overflow:hidden}
+summary{list-style:none;cursor:pointer;padding:14px;display:flex;align-items:center;gap:8px;font:800 17px "Baloo 2",system-ui,sans-serif}
+summary::-webkit-details-marker{display:none}
+summary .cnt{font:600 13px Nunito,sans-serif;color:var(--muted);margin-left:auto}
+summary .sel{background:var(--gold);color:#2a1a00;border-radius:99px;font:700 12px Nunito,sans-serif;padding:2px 9px}
+summary::after{content:"";width:9px;height:9px;border-right:2.5px solid var(--muted);border-bottom:2.5px solid var(--muted);transform:rotate(45deg);margin:0 4px 4px 6px;transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg);margin-bottom:-3px}
+.item{padding:11px 14px;border-top:1px solid var(--line);border-left:4px solid transparent}
+.item.on{border-left-color:var(--gold);background:#fffaf0}
+.nm{font-weight:700}
+.nm i{font:600 12px Nunito,sans-serif;color:var(--muted);font-style:normal;margin-right:6px}
+.meta{font-size:13px;color:var(--muted)}
+.row{display:flex;align-items:center;justify-content:space-between;margin-top:8px;gap:8px}
+.pr s{color:var(--muted);font-size:13px;margin-right:6px}
+.pr b{font:800 18px "Baloo 2",sans-serif;color:var(--night)}
+.ln{font-size:12px;color:#8a5a00;font-weight:700;min-height:16px}
+.st{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.st button{width:44px;height:44px;border:0;background:#f0eefa;font:700 22px Nunito,sans-serif;color:var(--night)}
+.st button:active{background:var(--gold)}
+.st input{width:46px;height:44px;border:0;text-align:center;font:700 17px Nunito,sans-serif;-moz-appearance:textfield}
+.st input::-webkit-outer-spin-button,.st input::-webkit-inner-spin-button{-webkit-appearance:none}
+.empty{text-align:center;color:var(--muted);padding:30px 10px}
+#fab{position:fixed;right:16px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;width:62px;height:62px;border-radius:50%;border:0;background:#25d366;box-shadow:0 6px 18px rgba(0,0,0,.3);display:grid;place-items:center}
+#fab svg{width:34px;height:34px;fill:#fff}
+#fab .bd{position:absolute;top:-4px;right:-4px;min-width:24px;height:24px;border-radius:12px;background:#d6246e;color:#fff;font:700 13px/24px Nunito,sans-serif;padding:0 6px;text-align:center}
+#ov{position:fixed;inset:0;z-index:40;background:rgba(15,10,40,.6);display:none;align-items:flex-end;justify-content:center}
+#ov.show{display:flex}
+.sheet{background:#fff;width:100%;max-width:560px;max-height:92%;overflow-y:auto;border-radius:20px 20px 0 0;padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px))}
+.sheet h2{margin:0 0 10px;font:800 20px "Baloo 2",sans-serif;display:flex;justify-content:space-between;align-items:center}
+.x{border:0;background:#f0eefa;width:38px;height:38px;border-radius:50%;font-size:20px}
+label{display:block;font-size:13px;font-weight:700;margin:10px 0 4px}
+.f{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;font:600 16px Nunito,sans-serif;background:#fff;color:var(--ink)}
+textarea.f{resize:vertical;min-height:62px}
+.sl{margin:14px 0 4px;border-top:1px dashed var(--line)}
+.si{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.si small{display:block;color:var(--muted)}
+.si b{white-space:nowrap}
+.sum{margin:12px 0;font-size:15px}
+.sum div{display:flex;justify-content:space-between;padding:3px 0}
+.sum .big{font:800 20px "Baloo 2",sans-serif;color:var(--night);border-top:2px solid var(--night);margin-top:6px;padding-top:8px}
+.err{color:#b3261e;font-weight:700;font-size:14px;min-height:20px}
+.send{width:100%;border:0;border-radius:14px;background:var(--wa);color:#fff;font:800 18px "Baloo 2",sans-serif;padding:13px;display:flex;align-items:center;justify-content:center;gap:10px}
+.send svg{width:26px;height:26px;fill:#fff}
+.clr{display:block;margin:12px auto 0;background:none;border:0;color:var(--muted);text-decoration:underline;font:600 14px Nunito,sans-serif;padding:8px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}summary::after{transition:none}}
+</style>
+</head>
+<body>
+<header id="hd">
+  <h1 class="brand">Vilvam Crackers <small>Price List 2026</small></h1>
+  <div class="tot">
+    <div class="tile"><span>Total price</span><b id="tMrp">₹0</b></div>
+    <div class="tile pay"><span id="tLbl">After 80% discount</span><b id="tPay">₹0</b></div>
+  </div>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Search by name or code" autocomplete="off" aria-label="Search products">
+    <div class="chips" id="chips"></div>
+  </div>
+</header>
+<main id="list"></main>
+
+<button id="fab" aria-label="Review order and send on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  <span class="bd" id="bd" hidden>0</span>
+</button>
+
+<div id="ov" role="dialog" aria-modal="true" aria-label="Your order">
+  <div class="sheet">
+    <h2>Your order <button class="x" id="cl" aria-label="Close">✕</button></h2>
+    <label for="cn">Your name *</label><input class="f" id="cn" autocomplete="name">
+    <label for="cp">Mobile number *</label><input class="f" id="cp" type="tel" inputmode="numeric" autocomplete="tel" maxlength="13">
+    <label for="ca">Delivery address / note</label><textarea class="f" id="ca" autocomplete="street-address"></textarea>
+    <div class="sl"></div>
+    <div id="items"></div>
+    <div class="sum" id="sum"></div>
+    <div class="err" id="err" role="alert"></div>
+    <button class="send" id="send"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#"/><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Send order on WhatsApp</button>
+    <button class="clr" id="clear">Clear all items</button>
+  </div>
+</div>
+
+<script>
+/* ===== Settings – edit these ===== */
+const WHATSAPP_NUMBER = "";   // e.g. "919876543210" (country code + number, no + or spaces). Leave empty to choose the contact in WhatsApp.
+const DISCOUNT = 80;          // percent
+const STORE = "Vilvam Crackers";
+/* ================================= */
+const DATA = [{"name":"Ground Chakkar","items":[{"id":101,"name":"Chakkar Big","mrp":160,"per":"1 Box","desc":"10 Pcs"},{"id":102,"name":"Chakkar Asoka Green","mrp":280,"per":"1 Box","desc":"10 Pcs"},{"id":103,"name":"Chakkar Special Green","mrp":380,"per":"1 Box","desc":"10 Pcs"},{"id":104,"name":"Twister Special (Plastic)","mrp":580,"per":"1 Box","desc":"10 Pcs"},{"id":105,"name":"Chakkar Deluxe","mrp":590,"per":"1 Box","desc":"10 Pcs"},{"id":106,"name":"Twister Deluxe (Plastic)","mrp":830,"per":"1 Box","desc":"10 Pcs"}]},{"name":"Fancy Chakkar","items":[{"id":107,"name":"Cocktail Spinner","mrp":410,"per":"1 Box","desc":"10 Pcs"},{"id":108,"name":"Wire Chakkar","mrp":640,"per":"1 Box","desc":"10 Pcs"},{"id":109,"name":"Whistling Wheel","mrp":670,"per":"1 Box","desc":"5 Pcs"},{"id":110,"name":"Maska Chaska","mrp":700,"per":"1 Box","desc":"5 Pcs"},{"id":111,"name":"Lotus Wheel","mrp":780,"per":"1 Box","desc":"5 Pcs"},{"id":112,"name":"Silver Giant Wheel","mrp":820,"per":"1 Box","desc":"10 Pcs"},{"id":113,"name":"Palm Tree (Stick Chakkar)","mrp":1620,"per":"1 Box","desc":"4 Pcs"}]},{"name":"Flower Pots","items":[{"id":114,"name":"Flower Pots Big","mrp":360,"per":"1 Box","desc":"10 Pcs"},{"id":115,"name":"Flower Pots Special","mrp":410,"per":"1 Box","desc":"10 Pcs"},{"id":116,"name":"Flower Pots Super Special","mrp":640,"per":"1 Box","desc":"10 Pcs"},{"id":117,"name":"Flower Pots Asoka","mrp":680,"per":"1 Box","desc":"10 Pcs"},{"id":118,"name":"Flower Pots Giant","mrp":1230,"per":"1 Box","desc":"10 Pcs"},{"id":119,"name":"Flower Pots Deluxe","mrp":1360,"per":"1 Box","desc":"5 Pcs"},{"id":120,"name":"Flower Pots Bloom Super Deluxe","mrp":680,"per":"1 Box","desc":"2 Pcs"},{"id":121,"name":"Colour Koti","mrp":960,"per":"1 Box","desc":"10 Pcs"},{"id":122,"name":"Colour Koti Deluxe","mrp":1660,"per":"1 Box","desc":"10 Pcs"},{"id":123,"name":"Colour Koti Super Deluxe","mrp":2500,"per":"1 Box","desc":"10 Pcs"}]},{"name":"Kids Special","items":[{"id":124,"name":"Green Stone","mrp":110,"per":"1 Box","desc":"10 Pcs"},{"id":125,"name":"Red Stone","mrp":120,"per":"1 Box","desc":"10 Pcs"},{"id":126,"name":"Assorted Cartoon","mrp":130,"per":"1 Box","desc":"10 Pcs"},{"id":127,"name":"Snake Cartoon","mrp":180,"per":"1 Box","desc":"10 Pcs"},{"id":128,"name":"Black Serpant Egg","mrp":210,"per":"1 Box","desc":"50 Pcs"},{"id":129,"name":"Emerald","mrp":230,"per":"1 Box","desc":"10 Pcs"}]},{"name":"Twinkling Stars","items":[{"id":130,"name":"Jil Jil","mrp":170,"per":"1 Pkt","desc":"10 Pcs"},{"id":131,"name":"1.5' Twinkling Star","mrp":190,"per":"1 Box","desc":"10 Pcs"},{"id":132,"name":"4' Twinkling Star","mrp":450,"per":"1 Box","desc":"10 Pcs"},{"id":133,"name":"Colour Strings","mrp":580,"per":"1 Box","desc":"5 Pcs"}]},{"name":"Bijili Crackers","items":[{"id":134,"name":"Red Bijili","mrp":220,"per":"1 Bag","desc":"100 Pcs"},{"id":135,"name":"Stripped Bijili","mrp":240,"per":"1 Bag","desc":"100 Pcs"}]},{"name":"Single Sound Crackers","items":[{"id":136,"name":"2¾” Deer","mrp":50,"per":"1 Pkt","desc":"5 Pcs"},{"id":137,"name":"4” Deluxe Lakshmi","mrp":140,"per":"1 Pkt","desc":"5 Pcs"},{"id":138,"name":"4” Super Deluxe Apple","mrp":200,"per":"1 Pkt","desc":"5 Pcs"},{"id":139,"name":"5\" Spider Man","mrp":300,"per":"1 Pkt","desc":"5 Pcs"},{"id":140,"name":"6\" Jallikattu","mrp":380,"per":"1 Pkt","desc":"5 Pcs"},{"id":141,"name":"2 Sound","mrp":200,"per":"1 Pkt","desc":"5 Pcs"}]},{"name":"Multi Sound Crackers","items":[{"id":142,"name":"Kunfu Dlx","mrp":340,"per":"1 Box","desc":"1 Pce"},{"id":143,"name":"Alert Lar","mrp":740,"per":"1 Box","desc":"30 Pcs"},{"id":144,"name":"100 Sticker","mrp":200,"per":"1 Box","desc":"1 Pce"},{"id":145,"name":"1K Sticker","mrp":800,"per":"1 Box","desc":"1 Pce"},{"id":146,"name":"5K Sticker","mrp":4000,"per":"1 Box","desc":"1 Pce"}]},{"name":"Bombs","items":[{"id":147,"name":"Paper Bomb ¼ Kg","mrp":250,"per":"1 Box","desc":"1 Pce"},{"id":148,"name":"Hydro Bomb Green","mrp":380,"per":"1 Box","desc":"10 Pcs"},{"id":149,"name":"Paper Bomb ½ Kg","mrp":500,"per":"1 Box","desc":"1 Pce"},{"id":150,"name":"Marathon Bomb Green","mrp":530,"per":"1 Box","desc":"10 Pcs"},{"id":151,"name":"Boom Boom (Water Bomb)","mrp":830,"per":"1 Box","desc":"25 Pcs"},{"id":152,"name":"Jurassic Bomb","mrp":930,"per":"1 Box","desc":"10 Pcs"},{"id":153,"name":"Paper Bomb 1Kg","mrp":1000,"per":"1 Box","desc":"1 Pce"},{"id":154,"name":"Digital Bomb","mrp":1130,"per":"1 Box","desc":"10 Pcs"}]},{"name":"Rockets","items":[{"id":155,"name":"Colour Rocket","mrp":330,"per":"1 Box","desc":"10 Pcs"},{"id":156,"name":"Rocket Bomb","mrp":430,"per":"1 Box","desc":"10 Pcs"},{"id":157,"name":"Lunik Rocket","mrp":630,"per":"1 Box","desc":"10 Pcs"},{"id":158,"name":"Whistling Rocket","mrp":980,"per":"1 Box","desc":"10 Pcs"}]},{"name":"Fancy Fountains","items":[{"id":159,"name":"Bacardi Mango / Lemon","mrp":180,"per":"1 Box","desc":"1 Pce Yellow/White Crackling"},{"id":160,"name":"Bacardi Bluberry / Tropical","mrp":180,"per":"1 Box","desc":"1 Pce Red / Green Crackling"},{"id":161,"name":"Bacardi Dragon Fruit","mrp":180,"per":"1 Box","desc":"1 Pce R & G Crackling"},{"id":162,"name":"Golden Flower","mrp":290,"per":"1 Box","desc":"10 Pcs Golden Shower"},{"id":163,"name":"Asrafi Big","mrp":340,"per":"1 Box","desc":"5 Pcs White Falls"},{"id":164,"name":"Butterfly","mrp":360,"per":"1 Box","desc":"10 Pcs Colour Changer"},{"id":165,"name":"Bro","mrp":390,"per":"1 Box","desc":"1 Pce Flickering"},{"id":166,"name":"Chino","mrp":390,"per":"1 Box","desc":"1 Pce Popcorn Crackling"},{"id":167,"name":"Hungry Colours","mrp":390,"per":"1 Box","desc":"1 Pce R & G Crackling"},{"id":168,"name":"Little Dove (5 Colour)","mrp":400,"per":"1 Box","desc":"1 Pce Colour Star"},{"id":169,"name":"Photo Flash Tricolour","mrp":440,"per":"1 Box","desc":"5 Pcs Multicolour Flashing"},{"id":170,"name":"Magical Rain","mrp":500,"per":"1 Box","desc":"5 pcs Multicolour Shower"},{"id":171,"name":"Peacock Feathers","mrp":510,"per":"1 Box","desc":"5 Pcs Golden Peacock"},{"id":172,"name":"Bambaram","mrp":510,"per":"1 Box","desc":"10 Pcs Spin On Floor"},{"id":173,"name":"Colour Rain","mrp":530,"per":"1 Box","desc":"5 Pcs R & G Falls"},{"id":174,"name":"Touch & Touch","mrp":530,"per":"1 Box","desc":"5 Pcs White Falls"},{"id":175,"name":"Rock Star / Krazy Kid","mrp":530,"per":"1 Box","desc":"1 Pce Sizziling Star / Popcorn"},{"id":176,"name":"Helicopter","mrp":580,"per":"1 Box","desc":"5 Pcs Colour Changer"},{"id":177,"name":"Cock Tail","mrp":610,"per":"1 Box","desc":"3 Pcs R & G Shower"},{"id":178,"name":"Gold Rush","mrp":610,"per":"1 Box","desc":"3 Pcs Golden Shower"},{"id":179,"name":"Magic Tree","mrp":610,"per":"1 Box","desc":"3 Pcs Silver Shower"},{"id":180,"name":"Drone","mrp":610,"per":"1 Box","desc":"5 Pcs Golden Spin on Air"},{"id":181,"name":"Lemon Tree (4 Colour)","mrp":610,"per":"1 Box","desc":"1 Pce 2 in 1 Crackling"},{"id":182,"name":"Money Bank","mrp":630,"per":"1 Box","desc":"3 Pcs Currency Note"},{"id":183,"name":"Tin Peatos","mrp":640,"per":"1 Box","desc":"3 Pcs Multicolour Shower With Crackling"},{"id":184,"name":"Tin Just Funny","mrp":640,"per":"1 Box","desc":"3 Pcs Multicolour Shower With Crackling"},{"id":185,"name":"Mega Siren","mrp":690,"per":"1 Box","desc":"3 Pcs Fountain With Sound"},{"id":186,"name":"Big Bang / Karaoke Night","mrp":740,"per":"1 Box","desc":"1 Pce Colour With Sizziling"},{"id":187,"name":"Jazz Music / Dr. Pepper","mrp":740,"per":"1 Box","desc":"1 Pce Colour With Sizziling"},{"id":188,"name":"Red Bull / Sting Blue","mrp":740,"per":"1 Box","desc":"1 Pce Special Colour Fountain"},{"id":189,"name":"Zombie / Violet Vampire","mrp":740,"per":"1 Box","desc":"1 Pce Special Colour Fountain"},{"id":190,"name":"Chotu Tri Colour Fountain","mrp":940,"per":"1 Box","desc":"5 Pcs Multicolour Fountain"},{"id":191,"name":"Ostrich Eggs","mrp":960,"per":"1 Box","desc":"2 Pcs Fountain With Ballon"},{"id":192,"name":"Cock Fight / Mojito","mrp":980,"per":"1 Box","desc":"2 Pcs Red Sizziling"},{"id":193,"name":"Ultra Voltage / Peacock","mrp":980,"per":"1 Box","desc":"2 Pcs Peacock Feather Crackling"},{"id":194,"name":"Pride Popcorn / Lollipops","mrp":980,"per":"1 Box","desc":"2 Pcs R&G Popcorn Crackling"},{"id":195,"name":"Rain & Shin","mrp":980,"per":"1 Box","desc":"1 Pce Red Fountain & Green Shot"},{"id":196,"name":"Timmy & Tommy","mrp":980,"per":"1 Box","desc":"1 Pce Green Fountain & Gold Shot"},{"id":197,"name":"Dolu & Bolu","mrp":980,"per":"1 Box","desc":"1 Pce Silver Fountain & Red Shot"},{"id":198,"name":"Jubbly & Bubbly","mrp":980,"per":"1 Box","desc":"1 Pce Gold Fountain & White Shot"},{"id":199,"name":"Mojo","mrp":1140,"per":"1 Box","desc":"5 Pcs Crackling Mines"},{"id":200,"name":"Apple / Orange","mrp":1140,"per":"1 Box","desc":"1 Pce R&G Crackling"},{"id":201,"name":"Pumpkin","mrp":1140,"per":"1 Box","desc":"1 Pce Green Crackling"},{"id":202,"name":"Strawberry","mrp":1140,"per":"1 Box","desc":"1 Pce Red Crackling"},{"id":203,"name":"Pineapple","mrp":1140,"per":"1 Box","desc":"1 Pce Yellow Crackling"},{"id":204,"name":"Swiss Bank","mrp":1230,"per":"1 Box","desc":"2 Pcs Currency Note"},{"id":205,"name":"Barbie","mrp":1230,"per":"1 Box","desc":"2 Pcs Red Valcano"},{"id":206,"name":"Crocs \\ Panda \\ Mister Tall","mrp":1330,"per":"1 Box","desc":"5 Pcs Crossette"},{"id":207,"name":"Tri Colour Fountain","mrp":1430,"per":"1 Box","desc":"5 Pcs Multicolour Fountain"},{"id":208,"name":"Festival Fountain","mrp":1630,"per":"1 Box","desc":"3 Pcs Gold Flickering"},{"id":209,"name":"Glittering Leaf Crackling","mrp":1630,"per":"1 Box","desc":"3 Pcs Silver Crackling"},{"id":210,"name":"Jolly Elephant","mrp":2230,"per":"1 Box","desc":"1 Pce 3 in 1 Function"}]},{"name":"Peacock Fountain","items":[{"id":211,"name":"Little Peacock Red / Green","mrp":630,"per":"1 Box","desc":"1 Pce Feather Function"},{"id":212,"name":"Little Peacock Silver / Gold","mrp":630,"per":"1 Box","desc":"1 Pce Feather Function"},{"id":213,"name":"Belly Dance Red / Green","mrp":730,"per":"1 Box","desc":"1 Pce Red / Green Crackling"},{"id":214,"name":"Belly Dance Silver / Gold","mrp":730,"per":"1 Box","desc":"1 Pce Silver / Gold Crackling"},{"id":215,"name":"Peacock Red / Green (3 Wings)","mrp":830,"per":"1 Box","desc":"1 Pce Red / Green"},{"id":216,"name":"Peacock Silver / Gold (3 Wings)","mrp":830,"per":"1 Box","desc":"1 Pce Silver / Gold"},{"id":217,"name":"Darling (3 Wings)","mrp":940,"per":"1 Box","desc":"1 Pce Golden Sprinkle"},{"id":218,"name":"Breeze (3 Wings)","mrp":940,"per":"1 Box","desc":"1 Pce White Sprinkle"},{"id":219,"name":"Indigo Surprise / Golden Dawn","mrp":1200,"per":"1 Box","desc":"1 Pce Purple / Golden Shower"},{"id":220,"name":"Dhandiya Peacock (5 Wings)","mrp":1900,"per":"1 Box","desc":"1 Pce R, G, W Crackling"},{"id":221,"name":"Bada Peacock (5 Wings)","mrp":2300,"per":"1 Box","desc":"1 Pce Golden Sprinkle"},{"id":222,"name":"Mega Mayil (5 Wings)","mrp":2400,"per":"1 Box","desc":"1 Pce Feather Function"},{"id":223,"name":"Bada Peacock Crackling (5 Wings)","mrp":2500,"per":"1 Box","desc":"1 Pce Suzz Crackling"}]},{"name":"Fancy Candles","items":[{"id":224,"name":"Jelly Silver / Gold","mrp":330,"per":"1 Box","desc":"1 Pce Feathering & Crackling"},{"id":225,"name":"Jelly Red & Green","mrp":330,"per":"1 Box","desc":"1 Pce Feathering & Crackling"},{"id":226,"name":"Selfie Stick Tricolour","mrp":680,"per":"1 Box","desc":"5 Pcs 3 in 1 Colour Flash"},{"id":227,"name":"Colour Smoke","mrp":720,"per":"1 Box","desc":"3 Pcs 3 in 1 Colour Smoke"},{"id":228,"name":"Vio Violet","mrp":980,"per":"1 Box","desc":"2 Pcs Purple Stick"},{"id":229,"name":"Tornando \\ Bazooka","mrp":1280,"per":"1 Box","desc":"2 Pcs Gold / Silver Crackling"},{"id":230,"name":"Crush","mrp":1280,"per":"1 Box","desc":"2 Pcs Pop Up Crackling"}]},{"name":"Tiny Ariel Novelties","items":[{"id":231,"name":"Air Force","mrp":390,"per":"1 Box","desc":"2 Pcs Gold"},{"id":232,"name":"Water Force","mrp":390,"per":"1 Box","desc":"2 Pcs Silver"},{"id":233,"name":"Fire Force","mrp":390,"per":"1 Box","desc":"2 Pcs Red"},{"id":234,"name":"Penta Force","mrp":390,"per":"1 Box","desc":"2 Pcs Green"},{"id":235,"name":"Laser Strike","mrp":590,"per":"1 Box","desc":"2 Pcs Peacock Mines"},{"id":236,"name":"Coco Loco","mrp":590,"per":"1 Box","desc":"2 Pcs Rider With Multicolour Shots"},{"id":237,"name":"Dup Tip","mrp":590,"per":"1 Box","desc":"5 Pcs Colour Tail to Crackling"},{"id":238,"name":"Battle Shot","mrp":690,"per":"1 Box","desc":"5 Pcs Multicolour Shots"}]},{"name":"Chota Fancy (1½” Pipe)","items":[{"id":239,"name":"Sachin","mrp":200,"per":"1 Box","desc":"1 Pce Boom with Sunrise"},{"id":240,"name":"Dhoni","mrp":200,"per":"1 Box","desc":"1 Pce Boom With Gold"},{"id":241,"name":"Rohit","mrp":200,"per":"1 Box","desc":"1 Pce Boom With Silver"},{"id":242,"name":"Kohli","mrp":200,"per":"1 Box","desc":"1 Pce Boom With Yellow"},{"id":243,"name":"Bummrah","mrp":200,"per":"1 Box","desc":"1 Pce Boom With Red & Green"}]},{"name":"Fancy (2” Pipe)","items":[{"id":244,"name":"Lava","mrp":530,"per":"1 Box","desc":"1 Pce Boom With Silver"},{"id":245,"name":"Nokia","mrp":530,"per":"1 Box","desc":"1 Pce Boom With Sunrise"},{"id":246,"name":"Oppo","mrp":530,"per":"1 Box","desc":"1 Pce Boom With Green"},{"id":247,"name":"Redmi","mrp":530,"per":"1 Box","desc":"1 Pce Boom With Red & Green"},{"id":248,"name":"Realme","mrp":530,"per":"1 Box","desc":"1 Pce Boom With Gold"},{"id":249,"name":"Vivo","mrp":530,"per":"1 Box","desc":"1 Pce Boom With Red"}]},{"name":"Fancy (2” Pipe 3 Pcs Packing)","items":[{"id":250,"name":"Fist Of Fury","mrp":1430,"per":"1 Box","desc":"3 Pcs Boom Red, Green, Silver"},{"id":251,"name":"Thriller","mrp":1430,"per":"1 Box","desc":"3 Pcs Boom Yellow, Red, Gold"},{"id":252,"name":"Emperors","mrp":1430,"per":"1 Box","desc":"3 Pcs Boom GGreen, White"}]},{"name":"Fancy (2½” Pipe)","items":[{"id":253,"name":"Big Bash","mrp":680,"per":"1 Box","desc":"1 Pce Boom With Palm Tree"},{"id":254,"name":"Battle Breakers","mrp":680,"per":"1 Box","desc":"1 Pce Boom With Red Sparkles"},{"id":255,"name":"Madmax","mrp":680,"per":"1 Box","desc":"1 Pce Boom With Multicolour Sparkles"},{"id":256,"name":"Eddie Eagles","mrp":680,"per":"1 Box","desc":"1 Pce Boom With Yellow Sparkles"},{"id":257,"name":"Snipers","mrp":680,"per":"1 Box","desc":"1 Pce Boom With Dove Sparkles"}]},{"name":"Fancy (3½” Pipe)","items":[{"id":258,"name":"King","mrp":1160,"per":"1 Box","desc":"1 Pce Boom With Red"},{"id":259,"name":"Queen","mrp":1160,"per":"1 Box","desc":"1 Pce Boom With Silver"},{"id":260,"name":"Bishop","mrp":1160,"per":"1 Box","desc":"1 Pce Boom With Palm Tree"},{"id":261,"name":"Rook","mrp":1160,"per":"1 Box","desc":"1 Pce Boom With Green"},{"id":262,"name":"Knight","mrp":1160,"per":"1 Box","desc":"1 Pce Boom With R & G"},{"id":263,"name":"Pawn","mrp":1160,"per":"1 Box","desc":"1 Pce Boom With White Crackling"}]},{"name":"Fancy (3½” Pipe Nayagara)","items":[{"id":264,"name":"Golden Eye Yellow / White","mrp":2130,"per":"1 Box","desc":"1 Pce Yellow Nayagara Falls"},{"id":265,"name":"Golden Eye Red / Green","mrp":2130,"per":"1 Box","desc":"1 Pce Red Nayagara Falls"},{"id":266,"name":"Golden Eye Crackling","mrp":2130,"per":"1 Box","desc":"1 Pce Crackling Nayagara Falls"}]},{"name":"Fancy (4” Pipe)","items":[{"id":267,"name":"Singleton","mrp":1780,"per":"1 Box","desc":"1 Pce Boom With R&G Balls"},{"id":268,"name":"Antiquity","mrp":1780,"per":"1 Box","desc":"1 Pce Boom With White Balls"},{"id":269,"name":"Royal Green","mrp":1780,"per":"1 Box","desc":"1 Pce Boom With Green Balls"},{"id":270,"name":"Dignity","mrp":1780,"per":"1 Box","desc":"1 Pce Boom With Red Balls"},{"id":271,"name":"Niagara Falls","mrp":1930,"per":"1 Box","desc":"1 Pce R&G Nayagara Falls"}]},{"name":"Fancy (4” Pipe 2 Pcs Packing)","items":[{"id":272,"name":"Dusk Dawn","mrp":3790,"per":"1 Box","desc":"1 Pce Boom With Gold & Green"},{"id":273,"name":"Hot Cold","mrp":3790,"per":"1 Box","desc":"1 Pce Boom With Sunrise & Crackling"},{"id":274,"name":"Jolly Jolly","mrp":3790,"per":"1 Box","desc":"1 Pce Boom With Gold & Nayagara"},{"id":275,"name":"Twin 90","mrp":3790,"per":"1 Box","desc":"1 Pce Boom With R&G & Silver"}]},{"name":"Fancy (4” Pipe Premium)","items":[{"id":276,"name":"Vibe","mrp":2030,"per":"1 Box","desc":"1 Pce Boom With Orange Balls"},{"id":277,"name":"Festi","mrp":2030,"per":"1 Box","desc":"1 Pce Boom With Pink Balls"},{"id":278,"name":"Crunch","mrp":2030,"per":"1 Box","desc":"1 Pce Boom With Pop Up Crackling"},{"id":279,"name":"God Father","mrp":2830,"per":"1 Box","desc":"1 Pce Boom With Purple Colour"},{"id":280,"name":"Neela Angels","mrp":2830,"per":"1 Box","desc":"1 Pce Boom With Blue Colour"}]},{"name":"Fancy (4” Pipe Double Ball)","items":[{"id":281,"name":"Power Peaks","mrp":2430,"per":"1 Box","desc":"1 Pce Boom With White & Yellow"},{"id":282,"name":"Skaty Sporty","mrp":2430,"per":"1 Box","desc":"1 Pce Boom With Red & Palm Tree"},{"id":283,"name":"Desire Drags","mrp":2430,"per":"1 Box","desc":"1 Pce Boom With Gold & Dove Sound"},{"id":284,"name":"Freaking Beast","mrp":2430,"per":"1 Box","desc":"1 Pce Boom With Gold & Silver"}]},{"name":"Fancy (4½” Pipe Premium 2 Pcs Packing)","items":[{"id":285,"name":"Mike Tyson","mrp":4790,"per":"1 Box","desc":"2 Pcs Green Crackling & Silver Flickering"},{"id":286,"name":"Neeraj Chopra","mrp":4790,"per":"1 Box","desc":"2 Pcs Red Crackling & Gold Flickering"},{"id":287,"name":"Usain Bolt","mrp":4790,"per":"1 Box","desc":"2 Pcs Silver & Gold Crackling"}]},{"name":"Fancy (4” Pipe Special 2 Pcs Packing)","items":[{"id":288,"name":"Ultra Flame","mrp":6930,"per":"1 Box","desc":"2 Pcs Ultra Lines With Red Colour"},{"id":289,"name":"Ultra Green","mrp":6930,"per":"1 Box","desc":"2 Pcs Ultra Lines With Green Colour"},{"id":290,"name":"Ultra Orange","mrp":6930,"per":"1 Box","desc":"2 Pcs Ultra Lines With Orange Colour"},{"id":291,"name":"Ultra Gold","mrp":6930,"per":"1 Box","desc":"2 Pcs Ultra Lines With Gold Colour"},{"id":292,"name":"Ultra Pearl","mrp":6930,"per":"1 Box","desc":"2 Pcs Ultra Lines With Silver Colour"}]},{"name":"Fancy (5” Pipe Premium)","items":[{"id":293,"name":"Eco Race","mrp":5330,"per":"1 Box","desc":"1 Pce Turbo Red"},{"id":294,"name":"Monte Carlo","mrp":5330,"per":"1 Box","desc":"1 Pce Turbo Green"},{"id":295,"name":"Silver Stone","mrp":5330,"per":"1 Box","desc":"1 Pce Turbo Silver"},{"id":296,"name":"Burn Out","mrp":5330,"per":"1 Box","desc":"1 Pce Turbo Gold"},{"id":297,"name":"Super GT","mrp":5330,"per":"1 Box","desc":"1 Pce Turbo Red & Green"}]},{"name":"Fancy (5” Pipe Ring Series 2 Pcs Packing)","items":[{"id":298,"name":"Magic Ruby","mrp":7030,"per":"1 Box","desc":"2 Pcs Magic Ring With Red Colour"},{"id":299,"name":"Magic Emerald","mrp":7030,"per":"1 Box","desc":"2 Pcs Magic Ring With Green Colour"},{"id":300,"name":"Magic Sapphire","mrp":7030,"per":"1 Box","desc":"2 Pcs Magic Ring With Blue Colour"},{"id":301,"name":"Magic Citrine","mrp":7030,"per":"1 Box","desc":"2 Pcs Magic Ring With Yellow Colour"},{"id":302,"name":"Magic Crystal","mrp":7030,"per":"1 Box","desc":"2 Pcs Magic Ring With White Colour"}]},{"name":"Fancy (6” Pipe)","items":[{"id":303,"name":"Ludo","mrp":4930,"per":"1 Box","desc":"1 Pce Boom With Green Balls"},{"id":304,"name":"Koopa","mrp":4930,"per":"1 Box","desc":"1 Pce Boom With Yellow Stars"},{"id":305,"name":"Red Hatter","mrp":4930,"per":"1 Box","desc":"1 Pce Boom With Red Balls"},{"id":306,"name":"Bobo Star","mrp":4930,"per":"1 Box","desc":"1 Pce Crackling With Nayagara Falls"}]},{"name":"Fancy (6” Pipe Special)","items":[{"id":307,"name":"Prime Plus Red","mrp":6030,"per":"1 Box","desc":"1 Pce Red Time Rain"},{"id":308,"name":"Prime Plus Green","mrp":6030,"per":"1 Box","desc":"1 Pce Green Time Rain"},{"id":309,"name":"Prime Plus White","mrp":6030,"per":"1 Box","desc":"1 Pce White Time Rain"},{"id":310,"name":"Prime Plus Yellow","mrp":6030,"per":"1 Box","desc":"1 Pce Yellow Time Rain"},{"id":311,"name":"Prime Plus Red & Green","mrp":6030,"per":"1 Box","desc":"1 Pce Red & Green Time Rain"}]},{"name":"Fancy (6” Pipe Premium)","items":[{"id":312,"name":"Loki","mrp":6930,"per":"1 Box","desc":"1 Pce Green Display Pearls"},{"id":313,"name":"Iron Man","mrp":6930,"per":"1 Box","desc":"1 Pce White Display Pearls"},{"id":314,"name":"Rocket Raccon","mrp":6930,"per":"1 Box","desc":"1 Pce Pink Display Pearls"},{"id":315,"name":"Black Panther","mrp":6930,"per":"1 Box","desc":"1 Pce Purple Display Pearls"},{"id":316,"name":"Doctor Strange","mrp":6930,"per":"1 Box","desc":"1 Pce Gold Display Pearls"}]},{"name":"Multi Shots","items":[{"id":317,"name":"12 Shots Nick","mrp":680,"per":"1 Box","desc":"1 Pce 12 Times Multicolour Valcano"},{"id":318,"name":"12 Shots Double Shooter","mrp":780,"per":"1 Box","desc":"1 Pce 12 Times Raider With Mines"},{"id":319,"name":"12 Shots Wonder","mrp":830,"per":"1 Box","desc":"1 Pce 12 Times Peacock Crackling"},{"id":320,"name":"12 Shots Mojito","mrp":980,"per":"1 Box","desc":"1 Pce 12 Times Multicolour Shots"},{"id":321,"name":"Kurkure & Cheetos (Smoke Shots)","mrp":1480,"per":"1 Box","desc":"1 Pce 10 Smoke Multicolour Shots"},{"id":322,"name":"12 Shots Singing Birds","mrp":2030,"per":"1 Box","desc":"1 Pce 12 Times Snake Whistle Sound"},{"id":323,"name":"12 Shots Mini (6 in 1)","mrp":3030,"per":"1 Box","desc":"6 Pcs 12 Times Multicolour Shots"},{"id":324,"name":"25 Shots (5 x 5)","mrp":3280,"per":"1 Box","desc":"1 Pce 5 x 5 Multicolour Crackling"},{"id":325,"name":"30 Shots","mrp":1780,"per":"1 Box","desc":"1 Pce 30 Times Mullticolour Shots"},{"id":326,"name":"60 Shots","mrp":3560,"per":"1 Box","desc":"1 Pce 60 Times Mullticolour Shots"},{"id":327,"name":"120 Shots","mrp":7120,"per":"1 Box","desc":"1 Pce 120 Times Mullticolour Shots"},{"id":328,"name":"30 Shots Spl","mrp":2280,"per":"1 Box","desc":"1 Pce 30 Times Crackling With Mullticolour"},{"id":329,"name":"60 Shots Spl","mrp":4560,"per":"1 Box","desc":"1 Pce 60 Times Crackling With Mullticolour"},{"id":330,"name":"120 Shots Spl","mrp":9120,"per":"1 Box","desc":"1 Pce 120 Times Crackling With Mullticolour"}]},{"name":"Sparklers","items":[{"id":331,"name":"10 Cm Electric","mrp":80,"per":"1 Box","desc":"10 Pcs"},{"id":332,"name":"10 Cm Crackling","mrp":90,"per":"1 Box","desc":"10 Pcs"},{"id":333,"name":"10 Cm Green","mrp":100,"per":"1 Box","desc":"10 Pcs"},{"id":334,"name":"10 Cm Red","mrp":110,"per":"1 Box","desc":"10 Pcs"},{"id":335,"name":"15 Cm Electric","mrp":210,"per":"1 Box","desc":"10 Pcs"},{"id":336,"name":"15 Cm Crackling","mrp":240,"per":"1 Box","desc":"10 Pcs"},{"id":337,"name":"15 Cm Green","mrp":250,"per":"1 Box","desc":"10 Pcs"},{"id":338,"name":"15 Cm Red","mrp":280,"per":"1 Box","desc":"10 Pcs"},{"id":339,"name":"30 Cm Electric","mrp":210,"per":"1 Box","desc":"5 Pcs"},{"id":340,"name":"30 Cm Crackling","mrp":240,"per":"1 Box","desc":"5 Pcs"},{"id":341,"name":"30 Cm Green","mrp":250,"per":"1 Box","desc":"5 Pcs"},{"id":342,"name":"30 Cm Red","mrp":280,"per":"1 Box","desc":"5 Pcs"},{"id":343,"name":"50 Cm Electric","mrp":550,"per":"1 Box","desc":"5 Pcs"},{"id":344,"name":"50 Cm Crackling","mrp":600,"per":"1 Box","desc":"5 Pcs"},{"id":345,"name":"Rotating Sparklers","mrp":900,"per":"1 Box","desc":"1 Pce"}]},{"name":"Colour Matches","items":[{"id":346,"name":"Classic 5 in 1","mrp":640,"per":"1 Box","desc":"10 Boxes"},{"id":347,"name":"7 up Rainbow","mrp":790,"per":"1 Box","desc":"10 Boxes"},{"id":348,"name":"VIP 10 in 1","mrp":1140,"per":"1 Box","desc":"10 Boxes"}]},{"name":"Gift Boxes","items":[{"id":349,"name":"Super 32 Items","mrp":3500,"per":"1 Box","desc":"32 Items"},{"id":350,"name":"Glamour 42 Items","mrp":4000,"per":"1 Box","desc":"42 Items"},{"id":351,"name":"Wonderful 55 Items","mrp":5000,"per":"1 Box","desc":"55 Items"},{"id":352,"name":"Majestic 60 Items","mrp":6000,"per":"1 Box","desc":"60 Items"}]}];
+const $ = id => document.getElementById(id);
+const fmt = n => "₹" + Math.round(n).toLocaleString("en-IN");
+const pay = m => m * (100 - DISCOUNT) / 100;
+const items = {}; DATA.forEach(c => c.items.forEach(i => items[i.id] = i));
+let qty = {}; try { qty = JSON.parse(localStorage.getItem("vc_qty") || "{}") } catch (e) {}
+Object.keys(qty).forEach(k => { if (!items[k] || !(qty[k] > 0)) delete qty[k] });
+let info = {}; try { info = JSON.parse(localStorage.getItem("vc_info") || "{}") } catch (e) {}
+const save = () => { try { localStorage.setItem("vc_qty", JSON.stringify(qty)); localStorage.setItem("vc_info", JSON.stringify(info)) } catch (e) {} };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+$("tLbl").textContent = "After " + DISCOUNT + "% discount";
+$("chips").innerHTML = DATA.map((c, i) => `<button data-c="${i}">${esc(c.name)}</button>`).join("");
+$("list").innerHTML = DATA.map((c, ci) => `
+<details id="cat${ci}" data-c="${ci}"><summary>${esc(c.name)}<span class="sel" hidden></span><span class="cnt">${c.items.length} items</span></summary>
+${c.items.map(i => `<div class="item" data-id="${i.id}">
+  <div class="nm"><i>#${i.id}</i>${esc(i.name)}</div>
+  <div class="meta">${esc(i.per)} · ${esc(i.desc)}</div>
+  <div class="row"><div class="pr"><s>${fmt(i.mrp)}</s><b>${fmt(pay(i.mrp))}</b></div>
+  <div class="st"><button data-a="-" aria-label="Decrease ${esc(i.name)}">−</button><input inputmode="numeric" pattern="[0-9]*" value="0" aria-label="Quantity of ${esc(i.name)}"><button data-a="+" aria-label="Increase ${esc(i.name)}">+</button></div></div>
+  <div class="ln"></div></div>`).join("")}
+</details>`).join("") + '<div class="empty" id="none" hidden>No products found. Try another word.</div>';
+
+function setQty(id, v) {
+  v = Math.max(0, Math.min(999, parseInt(v) || 0));
+  v ? qty[id] = v : delete qty[id];
+  paintRow(id); totals(); save();
+}
+function paintRow(id) {
+  const el = document.querySelector(`.item[data-id="${id}"]`), v = qty[id] || 0, i = items[id];
+  el.classList.toggle("on", v > 0);
+  el.querySelector("input").value = v;
+  el.querySelector(".ln").textContent = v ? `${v} × ${fmt(i.mrp)} = ${fmt(v * i.mrp)}  →  pay ${fmt(v * pay(i.mrp))}` : "";
+}
+function totals() {
+  let m = 0, n = 0, per = {};
+  Object.keys(qty).forEach(id => { m += qty[id] * items[id].mrp; n++; });
+  DATA.forEach((c, ci) => { const k = c.items.filter(i => qty[i.id]).length; const s = $("cat" + ci).querySelector(".sel"); s.hidden = !k; s.textContent = k + " added" });
+  $("tMrp").textContent = fmt(m); $("tPay").textContent = fmt(pay(m));
+  $("bd").hidden = !n; $("bd").textContent = n;
+  return { m, n };
+}
+$("list").addEventListener("click", e => {
+  const b = e.target.closest("button[data-a]"); if (!b) return;
+  const id = b.closest(".item").dataset.id;
+  setQty(id, (qty[id] || 0) + (b.dataset.a === "+" ? 1 : -1));
+});
+$("list").addEventListener("change", e => { if (e.target.matches(".st input")) setQty(e.target.closest(".item").dataset.id, e.target.value) });
+$("list").addEventListener("focusin", e => { if (e.target.matches(".st input")) e.target.select() });
+
+$("chips").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  $("q").value = ""; filter();
+  const d = $("cat" + b.dataset.c); d.open = true; d.scrollIntoView();
+});
+function filter() {
+  const t = $("q").value.trim().toLowerCase(); let any = false;
+  DATA.forEach((c, ci) => {
+    const d = $("cat" + ci); let hit = 0;
+    d.querySelectorAll(".item").forEach(el => {
+      const i = items[el.dataset.id];
+      const ok = !t || (i.id + " " + i.name + " " + c.name).toLowerCase().includes(t);
+      el.hidden = !ok; if (ok) hit++;
+    });
+    d.hidden = !hit; if (hit) any = true;
+    if (t) d.open = true;
+  });
+  $("none").hidden = any;
+}
+$("q").addEventListener("input", filter);
+
+function buildMsg() {
+  const { m } = totals();
+  const ids = Object.keys(qty);
+  let t = `🎆 *Order – ${STORE} 2026*\n\n👤 ${info.n}\n📞 ${info.p}\n`;
+  if (info.a) t += `📍 ${info.a}\n`;
+  t += `\n*Items*\n`;
+  ids.forEach((id, k) => { const i = items[id]; t += `${k + 1}. [${id}] ${i.name} – ${qty[id]} × ${fmt(i.mrp)} = ${fmt(qty[id] * i.mrp)}\n` });
+  t += `\n*Total price: ${fmt(m)}*\n*After ${DISCOUNT}% discount: ${fmt(pay(m))}*`;
+  return t;
+}
+function openSheet() {
+  $("cn").value = info.n || ""; $("cp").value = info.p || ""; $("ca").value = info.a || "";
+  const { m, n } = totals(), ids = Object.keys(qty);
+  $("items").innerHTML = n ? ids.map(id => { const i = items[id], v = qty[id]; return `<div class="si"><div>${esc(i.name)}<small>${v} × ${fmt(i.mrp)}</small></div><b>${fmt(v * i.mrp)}</b></div>` }).join("") : '<div class="empty">No items yet. Close this and tap + on the products you want.</div>';
+  $("sum").innerHTML = n ? `<div><span>Total price</span><span>${fmt(m)}</span></div><div><span>Discount (${DISCOUNT}%)</span><span>− ${fmt(m - pay(m))}</span></div><div class="big"><span>You pay</span><span>${fmt(pay(m))}</span></div>` : "";
+  $("err").textContent = ""; $("ov").classList.add("show"); document.body.style.overflow = "hidden";
+}
+const closeSheet = () => { $("ov").classList.remove("show"); document.body.style.overflow = "" };
+$("fab").onclick = openSheet; $("cl").onclick = closeSheet;
+$("ov").addEventListener("click", e => { if (e.target === $("ov")) closeSheet() });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeSheet() });
+["cn", "cp", "ca"].forEach(id => $(id).addEventListener("input", () => { info = { n: $("cn").value.trim(), p: $("cp").value.trim(), a: $("ca").value.trim() }; save() }));
+$("clear").onclick = () => { if (confirm("Remove all items from your order?")) { Object.keys(qty).forEach(id => { delete qty[id]; paintRow(id) }); totals(); save(); openSheet() } };
+$("send").onclick = () => {
+  info = { n: $("cn").value.trim(), p: $("cp").value.trim(), a: $("ca").value.trim() }; save();
+  const digits = info.p.replace(/\D/g, "");
+  if (!Object.keys(qty).length) return $("err").textContent = "Add at least one item to your order.";
+  if (!info.n) return $("err").textContent = "Please enter your name.";
+  if (digits.length < 10) return $("err").textContent = "Please enter a valid 10-digit mobile number.";
+  const url = "https://wa.me/" + WHATSAPP_NUMBER.replace(/\D/g, "") + "?text=" + encodeURIComponent(buildMsg());
+  if (!window.open(url, "_blank")) location.href = url;
+};
+const setHH = () => document.documentElement.style.setProperty("--hh", $("hd").offsetHeight + "px");
+addEventListener("resize", setHH); setHH();
+Object.keys(qty).forEach(paintRow); totals();
+const first = document.querySelector("details"); if (first) first.open = true;
+</script>
+</body>
+</html>
